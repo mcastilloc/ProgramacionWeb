@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen Programacion WEB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Menú principal</h1>
+        <p>Selecciona un ejercicio</p>
+
+        <div class="menu-botones">
+            <a class="boton boton-ejercicio1" href="{{ url_for('ejercicio1') }}">
+                Ejercicio 1
+            </a>
+            <a class="boton boton-ejercicio2" href="{{ url_for('ejercicio2') }}">
+                Ejercicio 2
+            </a>
+        </div>
+    </main>
+</body>
+</html>
+

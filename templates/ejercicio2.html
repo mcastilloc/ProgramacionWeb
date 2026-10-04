@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Inicio de sesión</h1>
+
+        <form method="post" class="formulario">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <button class="boton boton-accion" type="submit">Validar</button>
+        </form>
+
+        {% if mensaje %}
+            <p class="mensaje {% if correcto %}correcto{% else %}error{% endif %}">
+                {{ mensaje }}
+            </p>
+        {% endif %}
+
+        <a class="volver" href="{{ url_for('inicio') }}">Volver al menú</a>
+    </main>
+</body>
+</html>
